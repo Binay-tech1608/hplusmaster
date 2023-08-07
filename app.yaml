@@ -1,0 +1,22 @@
+runtime: python
+version: 3.9.9
+
+entrypoint: gunicorn -b :$PORT main:app
+
+dependencies:
+  # Flask and its extensions
+  - flask
+  - flask_sqlalchemy
+  - flask_login
+  - flask_mail
+  
+  # Other dependencies
+  - sqlalchemy
+  - werkzeug
+  
+  # Additional dependencies for your app
+  - json
+  - smtplib
+  - functools
+  - email
+  - os
